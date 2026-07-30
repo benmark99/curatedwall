@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop by Room | Curated Wall Solutions</title>
+    <!-- Google Fonts untuk kesan Quiet Luxury -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #FAFAFA;
+            --text-main: #111111;
+            --text-muted: #666666;
+            --accent: #C5A059; /* Soft Luxury Gold */
+            --border-subtle: #E5E5E5;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+        header {
+            padding: 2.5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+            font-weight: 600;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: var(--text-main);
+        }
+        .nav-back {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .nav-back:hover {
+            color: var(--text-main);
+        }
+        
+        /* Page Header */
+        .page-header {
+            padding: 5rem 5% 3rem 5%;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .page-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.2rem, 4vw, 3.5rem);
+            font-weight: 400;
+            margin-bottom: 1rem;
+        }
+        .page-header p {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Rooms Grid Section */
+        .catalog-container {
+            padding: 2rem 5% 6rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .catalog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+        }
+        .room-card {
+            background: #FFFFFF;
+            border: 1px solid var(--border-subtle);
+            padding: 3rem 2.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .room-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+        }
+        .room-tag {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--accent);
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+        .room-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            font-weight: 400;
+        }
+        .room-card p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+        .room-link {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-main);
+            text-decoration: none;
+            border-bottom: 1px solid var(--text-main);
+            padding-bottom: 2px;
+            width: fit-content;
+            transition: color 0.3s ease, border-color 0.3s ease;
+        }
+        .room-link:hover {
+            color: var(--accent);
+            border-color: var(--accent);
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem 5%;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border-subtle);
+            background-color: #FFFFFF;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">Curated Wall Solutions</a>
+        <a href="index.html" class="nav-back">← Back to Home</a>
+    </header>
+
+    <section class="page-header">
+        <h1>Explore By Spatial Function</h1>
+        <p>Select a room below to discover our meticulously color-graded art bundles, designed specifically to resolve architectural challenges in high-end homes.</p>
+    </section>
+
+    <!-- Catalog Rooms Grid -->
+    <div class="catalog-container">
+        <div class="catalog-grid">
+            
+            <!-- Living & Family Room -->
+            <div class="room-card">
+                <div>
+                    <span class="room-tag">Core Living Space</span>
+                    <h3>Living & Family Rooms</h3>
+                    <p>Large-scale statement pieces and color-balanced gallery sets designed to anchor primary architectural focal points above sofas and large fireplaces.</p>
+                </div>
+                <!-- Ubah link href di bawah sesuai file halaman ruangan detail Anda (misal: rooms/living-room.html) -->
+                <a href="rooms/living-room.html" class="room-link">Explore Living Collection →</a>
+            </div>
+
+            <!-- Powder Room -->
+            <div class="room-card">
+                <div>
+                    <span class="room-tag">Guest Experience</span>
+                    <h3>The Powder Room</h3>
+                    <p>Eccentric, witty, and sophisticated statement prints guaranteed to spark delightful conversation among your dinner guests.</p>
+                </div>
+                <a href="rooms/powder-room.html" class="room-link">Explore Powder Room →</a>
+            </div>
+
+            <!-- Workspace & Studio -->
+            <div class="room-card">
+                <div>
+                    <span class="room-tag">Productivity & Focus</span>
+                    <h3>Workspace & Studio</h3>
+                    <p>Precision architectural blueprints and focus-boosting typography tailored for modern remote professionals, creators, and home studies.</p>
+                </div>
+                <a href="rooms/workspace.html" class="room-link">Explore Workspace →</a>
+            </div>
+
+            <!-- Master Bedroom -->
+            <div class="room-card">
+                <div>
+                    <span class="room-tag">The Sleep Sanctuary</span>
+                    <h3>Master Suite & Wellness</h3>
+                    <p>Soothing earth-tone abstract horizons and soft organic curves color-graded to lower visual stress and create an ultimate resting sanctuary.</p>
+                </div>
+                <a href="rooms/master-suite.html" class="room-link">Explore Sanctuary →</a>
+            </div>
+
+            <!-- Dining & Kitchen -->
+            <div class="room-card">
+                <div>
+                    <span class="room-tag">Culinary Domain</span>
+                    <h3>Kitchen & Dining Nook</h3>
+                    <p>Vintage coffee patents, botanical spice studies, and classic bistro aesthetics crafted for culinary enthusiasts and home entertainers.</p>
+                </div>
+                <a href="rooms/kitchen-dining.html" class="room-link">Explore Culinary Art →</a>
+            </div>
+
+            <!-- Hallways & Stairs -->
+            <div class="room-card">
+                <div>
+                    <span class="room-tag">Architectural Gaps</span>
+                    <h3>Hallways & Staircases</h3>
+                    <p>Cohesive mixed-ratio gallery sets and spatial illusion prints that seamlessly transform awkward transitions and long corridors.</p>
+                </div>
+                <a href="rooms/hallways-stairs.html" class="room-link">Explore Transition Art →</a>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Curated Wall Solutions. All rights reserved. For Personal Use Only.</p>
+    </footer>
+
+</body>
+</html>
