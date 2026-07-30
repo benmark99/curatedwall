@@ -3,11 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curated Wall Solutions | High-End Spatial Art Curation Service for American Homes</title>
+    <title>Shop by Room | Curated Wall Solutions</title>
     <!-- Google Fonts untuk kesan Quiet Luxury -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-    <!-- Font Awesome CDN untuk ikon pembayaran -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
             --bg-color: #FAFAFA;
@@ -17,7 +15,6 @@
             --border-subtle: #E5E5E5;
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        html { scroll-behavior: smooth; }
         body {
             font-family: 'Inter', sans-serif;
             background-color: var(--bg-color);
@@ -25,156 +22,64 @@
             line-height: 1.6;
             -webkit-font-smoothing: antialiased;
         }
-        
-        /* Sticky Top Bar / Header */
         header {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            padding: 1.5rem 5%;
+            padding: 2.5rem 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
             border-bottom: 1px solid var(--border-subtle);
-            background-color: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
         }
         .logo {
             font-family: 'Playfair Display', serif;
-            font-size: 1.3rem;
+            font-size: 1.5rem;
             letter-spacing: 1px;
             font-weight: 600;
             text-transform: uppercase;
             text-decoration: none;
             color: var(--text-main);
         }
-        .nav-link {
+        .nav-back {
             font-size: 0.85rem;
-            letter-spacing: 1px;
-            text-decoration: none;
-            color: var(--text-main);
             text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-muted);
+            text-decoration: none;
             transition: color 0.3s ease;
         }
-        .nav-link:hover {
-            color: var(--accent);
-        }
-
-        /* Hero Section */
-        .hero {
-            padding: 6rem 5% 4rem 5%;
-            max-width: 950px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        .hero-tag {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: var(--accent);
-            margin-bottom: 1.2rem;
-            font-weight: 500;
-            display: inline-block;
-        }
-        .hero h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(2.5rem, 5vw, 4.2rem);
-            font-weight: 400;
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
-        }
-        .hero p {
-            font-size: 1.15rem;
-            color: var(--text-muted);
-            margin-bottom: 2.5rem;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .btn-primary {
-            display: inline-block;
-            background-color: var(--text-main);
-            color: #FFFFFF;
-            padding: 1.1rem 2.8rem;
-            text-decoration: none;
-            font-size: 0.9rem;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            transition: background 0.3s ease;
-        }
-        .btn-primary:hover {
-            background-color: var(--accent);
+        .nav-back:hover {
+            color: var(--text-main);
         }
         
-        /* Service Statement Banner */
-        .service-statement {
-            background-color: #FFFFFF;
-            padding: 4rem 5%;
-            border-top: 1px solid var(--border-subtle);
-            border-bottom: 1px solid var(--border-subtle);
+        /* Page Header */
+        .page-header {
+            padding: 5rem 5% 3rem 5%;
+            max-width: 900px;
+            margin: 0 auto;
             text-align: center;
         }
-        .service-statement-inner {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .service-statement h2 {
+        .page-header h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
+            font-size: clamp(2.2rem, 4vw, 3.5rem);
             font-weight: 400;
             margin-bottom: 1rem;
         }
-        .service-statement p {
-            font-size: 1rem;
+        .page-header p {
+            font-size: 1.05rem;
             color: var(--text-muted);
-            line-height: 1.7;
-        }
-
-        /* Trust Shield Section */
-        .trust-section {
-            padding: 4rem 5%;
-            max-width: 1100px;
+            max-width: 600px;
             margin: 0 auto;
         }
-        .trust-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2.5rem;
-        }
-        .trust-item {
-            background: #FFFFFF;
-            padding: 2.5rem;
-            border: 1px solid var(--border-subtle);
-        }
-        .trust-item h3 {
-            font-size: 1.05rem;
-            font-weight: 500;
-            margin-bottom: 0.8rem;
-            font-family: 'Playfair Display', serif;
-        }
-        .trust-item p {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-        }
 
-        /* Rooms Section */
-        .rooms-container {
-            padding: 5rem 5%;
+        /* Rooms Grid Section */
+        .catalog-container {
+            padding: 2rem 5% 6rem 5%;
             max-width: 1200px;
             margin: 0 auto;
-            border-top: 1px solid var(--border-subtle);
         }
-        .section-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.2rem;
-            text-align: center;
-            margin-bottom: 3.5rem;
-            font-weight: 400;
-        }
-        .rooms-grid {
+        .catalog-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
+            gap: 2.5rem;
         }
         .room-card {
             background: #FFFFFF;
@@ -189,9 +94,17 @@
             transform: translateY(-5px);
             box-shadow: 0 10px 30px rgba(0,0,0,0.03);
         }
+        .room-tag {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--accent);
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
         .room-card h3 {
             font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             margin-bottom: 1rem;
             font-weight: 400;
         }
@@ -216,26 +129,9 @@
             border-color: var(--accent);
         }
 
-        /* Payment Banner Section */
-        .payment-banner {
-            background-color: #FFFFFF;
-            padding: 3rem 5%;
-            border-top: 1px solid var(--border-subtle);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-        .payment-banner p {
-            font-size: 0.85rem;
-            letter-spacing: 1px;
-            color: var(--text-muted);
-            margin-bottom: 1.5rem;
-        }
-
         footer {
             text-align: center;
-            padding: 2.5rem 5%;
+            padding: 3rem 5%;
             font-size: 0.8rem;
             color: var(--text-muted);
             border-top: 1px solid var(--border-subtle);
@@ -245,93 +141,86 @@
 </head>
 <body>
 
-    <!-- Sticky Header -->
     <header>
         <a href="index.html" class="logo">Curated Wall Solutions</a>
-        <a href="#rooms" class="nav-link">Explore Collections</a>
+        <a href="index.html" class="nav-back">← Back to Home</a>
     </header>
 
-    <section class="hero">
-        <span class="hero-tag">Virtual Art Curation & Spatial Styling Service</span>
-        <h1>Professional Visual Curation for High-End American Homes</h1>
-        <p>We eliminate spatial stress by providing expertly color-graded, multi-ratio art bundles designed to anchor architectural focal points in your home instantly.</p>
-        <a href="#rooms" class="btn-primary">Explore Curated Collections</a>
+    <section class="page-header">
+        <h1>Explore By Spatial Function</h1>
+        <p>Select a room below to discover our meticulously color-graded art bundles, designed specifically to resolve architectural challenges in high-end homes.</p>
     </section>
 
-    <!-- Clear Service Statement -->
-    <section class="service-statement">
-        <div class="service-statement-inner">
-            <h2>Not Just Files. A Complete Spatial Solution.</h2>
-            <p>We act as your virtual art curator. Instead of guessing frame sizes or colors, you receive professionally balanced gallery collections complete with 5 standard US aspect ratios, step-by-step printing guides, and instant digital delivery.</p>
-        </div>
-    </section>
-
-    <!-- Trust Shield Section -->
-    <div style="background-color: #FAFAFA; padding: 2rem 0;">
-        <section class="trust-section">
-            <div class="trust-grid">
-                <div class="trust-item">
-                    <h3>🔒 Secure Global Checkout</h3>
-                    <p>Transactions are legally processed and encrypted by Lemon Squeezy and Payhip (Global Merchant of Record), ensuring 100% buyer protection in the US.</p>
-                </div>
-                <div class="trust-item">
-                    <h3>⚡ Instant Digital Access</h3>
-                    <p>Receive high-resolution master files (300 DPI) and full ratio bundles delivered directly to your email seconds after purchase.</p>
-                </div>
-                <div class="trust-item">
-                    <h3>📐 Guaranteed Frame Fit</h3>
-                    <p>Every collection includes 5 precise aspect ratios (2:3, 3:4, 4:5, ISO, and 11x14) to fit standard US framing standards effortlessly.</p>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <!-- Shop by Room Section -->
-    <div class="rooms-container" id="rooms">
-        <h2 class="section-title">Shop by Room Curation</h2>
-        <div class="rooms-grid">
+    <!-- Catalog Rooms Grid -->
+    <div class="catalog-container">
+        <div class="catalog-grid">
             
+            <!-- Living & Family Room -->
             <div class="room-card">
                 <div>
+                    <span class="room-tag">Core Living Space</span>
                     <h3>Living & Family Rooms</h3>
-                    <p>Large-scale statement pieces and color-balanced gallery sets designed to anchor primary architectural focal points above sofas.</p>
+                    <p>Large-scale statement pieces and color-balanced gallery sets designed to anchor primary architectural focal points above sofas and large fireplaces.</p>
                 </div>
+                <!-- Ubah link href di bawah sesuai file halaman ruangan detail Anda (misal: rooms/living-room.html) -->
                 <a href="rooms/living-room.html" class="room-link">Explore Living Collection →</a>
             </div>
 
+            <!-- Powder Room -->
             <div class="room-card">
                 <div>
+                    <span class="room-tag">Guest Experience</span>
                     <h3>The Powder Room</h3>
                     <p>Eccentric, witty, and sophisticated statement prints guaranteed to spark delightful conversation among your dinner guests.</p>
                 </div>
                 <a href="rooms/powder-room.html" class="room-link">Explore Powder Room →</a>
             </div>
 
+            <!-- Workspace & Studio -->
             <div class="room-card">
                 <div>
+                    <span class="room-tag">Productivity & Focus</span>
                     <h3>Workspace & Studio</h3>
-                    <p>Precision architectural blueprints and focus-boosting typography tailored for modern remote professionals and creators.</p>
+                    <p>Precision architectural blueprints and focus-boosting typography tailored for modern remote professionals, creators, and home studies.</p>
                 </div>
                 <a href="rooms/workspace.html" class="room-link">Explore Workspace →</a>
+            </div>
+
+            <!-- Master Bedroom -->
+            <div class="room-card">
+                <div>
+                    <span class="room-tag">The Sleep Sanctuary</span>
+                    <h3>Master Suite & Wellness</h3>
+                    <p>Soothing earth-tone abstract horizons and soft organic curves color-graded to lower visual stress and create an ultimate resting sanctuary.</p>
+                </div>
+                <a href="rooms/master-suite.html" class="room-link">Explore Sanctuary →</a>
+            </div>
+
+            <!-- Dining & Kitchen -->
+            <div class="room-card">
+                <div>
+                    <span class="room-tag">Culinary Domain</span>
+                    <h3>Kitchen & Dining Nook</h3>
+                    <p>Vintage coffee patents, botanical spice studies, and classic bistro aesthetics crafted for culinary enthusiasts and home entertainers.</p>
+                </div>
+                <a href="rooms/kitchen-dining.html" class="room-link">Explore Culinary Art →</a>
+            </div>
+
+            <!-- Hallways & Stairs -->
+            <div class="room-card">
+                <div>
+                    <span class="room-tag">Architectural Gaps</span>
+                    <h3>Hallways & Staircases</h3>
+                    <p>Cohesive mixed-ratio gallery sets and spatial illusion prints that seamlessly transform awkward transitions and long corridors.</p>
+                </div>
+                <a href="rooms/hallways-stairs.html" class="room-link">Explore Transition Art →</a>
             </div>
 
         </div>
     </div>
 
-    <!-- Payment Badges / Trust Banner -->
-    <section class="payment-banner">
-        <p>Powered By Lemon Squeezy / Payhip / Gumroad</p>
-        <!-- Kontainer Footer Ikon Pembayaran -->
-        <div class="payment-icons" style="font-size: 30px; color: #666; display: flex; gap: 15px; justify-content: center; align-items: center;">
-            <i class="fa-brands fa-cc-visa"></i>
-            <i class="fa-brands fa-cc-mastercard"></i>
-            <i class="fa-brands fa-cc-paypal"></i>
-            <i class="fa-brands fa-cc-stripe"></i>
-        </div>
-    </section>
-
     <footer>
-        <p>&copy; 2026 Curated Wall Solutions. All rights reserved. Secure checkout powered by Lemon Squeezy & Payhip. For Personal Use Only.</p>
+        <p>&copy; 2026 Curated Wall Solutions. All rights reserved. For Personal Use Only.</p>
     </footer>
 
 </body>
